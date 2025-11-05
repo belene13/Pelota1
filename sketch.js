@@ -1,4 +1,4 @@
-const NP = 100;
+const NP = 60;
 let pelotas = [];
 
 function setup() {
@@ -7,15 +7,15 @@ function setup() {
 
     for(let i = 0; i < NP; i++){
         let nuevaPelota = new Pelota();
-     pelotas[i] = nuevaPelota();
+        pelotas[i] = nuevaPelota;
     }
 }
 
 function draw() {
-    background(150);
+    background("#ffffffff");
 
     for(let i = 0; i < NP; i++){
-    pelotas[i] = actualizar();
-    pelotas[i] = visualizar();
+        pelotas[i].actualizar();
+        pelotas[i].visualizar();
     }
 }
